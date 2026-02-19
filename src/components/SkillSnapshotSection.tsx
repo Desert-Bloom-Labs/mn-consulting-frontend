@@ -3,6 +3,13 @@ import azaImage from '../assets/aza_image.jpg'
 
 type SnapshotCard = 'main' | 'writing' | 'business' | 'leadership'
 
+const snapshotRevealConfig = {
+  main: { delay: '110', motion: 'card-left' },
+  writing: { delay: '190', motion: 'card-pop' },
+  business: { delay: '270', motion: 'card-right' },
+  leadership: { delay: '350', motion: 'card-tilt' },
+} as const
+
 const SkillSnapshotSection = () => {
   const [activeCard, setActiveCard] = useState<SnapshotCard>('main')
 
@@ -28,8 +35,8 @@ const SkillSnapshotSection = () => {
           <div
             className={`snapshot-main-course snapshot-hover-card reveal-on-scroll ${activeCard === 'main' ? 'is-expanded' : 'is-compressed'}`}
             data-reveal
-            data-reveal-delay="120"
-            data-motion="card-left"
+            data-reveal-delay={snapshotRevealConfig.main.delay}
+            data-motion={snapshotRevealConfig.main.motion}
             onMouseEnter={() => setActiveCard('main')}
             onFocus={() => setActiveCard('main')}
             tabIndex={0}
@@ -49,8 +56,8 @@ const SkillSnapshotSection = () => {
           <div
             className={`snapshot-side-course snapshot-side-writing snapshot-hover-card reveal-on-scroll ${activeCard === 'writing' ? 'is-expanded' : 'is-compressed'}`}
             data-reveal
-            data-reveal-delay="190"
-            data-motion="card-pop"
+            data-reveal-delay={snapshotRevealConfig.writing.delay}
+            data-motion={snapshotRevealConfig.writing.motion}
             onMouseEnter={() => setActiveCard('writing')}
             onFocus={() => setActiveCard('writing')}
             tabIndex={0}
@@ -70,8 +77,8 @@ const SkillSnapshotSection = () => {
           <div
             className={`snapshot-side-course snapshot-side-business snapshot-hover-card reveal-on-scroll ${activeCard === 'business' ? 'is-expanded' : 'is-compressed'}`}
             data-reveal
-            data-reveal-delay="260"
-            data-motion="card-right"
+            data-reveal-delay={snapshotRevealConfig.business.delay}
+            data-motion={snapshotRevealConfig.business.motion}
             onMouseEnter={() => setActiveCard('business')}
             onFocus={() => setActiveCard('business')}
             tabIndex={0}
@@ -91,8 +98,8 @@ const SkillSnapshotSection = () => {
           <div
             className={`snapshot-side-course snapshot-side-leadership snapshot-hover-card reveal-on-scroll ${activeCard === 'leadership' ? 'is-expanded' : 'is-compressed'}`}
             data-reveal
-            data-reveal-delay="330"
-            data-motion="card-tilt"
+            data-reveal-delay={snapshotRevealConfig.leadership.delay}
+            data-motion={snapshotRevealConfig.leadership.motion}
             onMouseEnter={() => setActiveCard('leadership')}
             onFocus={() => setActiveCard('leadership')}
             tabIndex={0}
