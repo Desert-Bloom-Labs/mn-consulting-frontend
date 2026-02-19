@@ -1,0 +1,38 @@
+:root {
+  /* Primary palette: brand and main hierarchy */
+  --color-primary-900: #08144f;
+  --color-primary-800: #0b133f;
+  --color-primary-700: #131632;
+  --color-primary-600: #111843;
+  --color-primary-500: #5f87d7;
+  --color-primary-300: #96bdcb;
+
+  /* Secondary palette: warm accents and CTA contrast */
+  --color-secondary-500: #f18e74;
+  --color-secondary-400: #e68f82;
+  --color-secondary-200: #efddd2;
+  --color-secondary-100: #ecf2ff;
+
+  /* Tertiary palette: neutrals and soft backgrounds */
+  --color-tertiary-100: #fdfcf9;
+  --color-tertiary-150: #f5f4ef;
+  --color-tertiary-200: #f5ebe4;
+  --color-tertiary-300: #dbdde4;
+  --color-tertiary-500: #7f8598;
+  --color-tertiary-700: #5f6573;
+  --color-tertiary-900: #111319;
+
+  /* Existing semantic aliases to keep current look unchanged */
+  --scene-bg: var(--color-tertiary-200);
+  --scene-strip: var(--color-secondary-200);
+  --panel-base: var(--color-tertiary-100);
+  --ink-primary: var(--color-primary-800);
+  --ink-secondary: var(--color-tertiary-900);
+  --ink-muted: var(--color-tertiary-700);
+  --line-soft: var(--color-tertiary-300);
+  --line-strong: var(--color-primary-700);
+  --collage-blue: var(--color-primary-500);
+  --collage-sky: var(--color-primary-300);
+  --collage-coral: var(--color-secondary-500);
+  --collage-navy: var(--color-primary-900);
+}
